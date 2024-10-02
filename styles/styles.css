@@ -1,1 +1,30 @@
-/* CSS */
+html {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+
+.Logo {
+    color: black;
+}
+
+
+ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
