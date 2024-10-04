@@ -30,7 +30,9 @@ ul {
 
 @supports not (grid-template-rows: masonry) {
     .infinite-canvas {
-        column-width: 200px;
+        display: grid;
+        gap: .5em;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
     
 }
