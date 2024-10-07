@@ -3,6 +3,9 @@ html {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 body {
