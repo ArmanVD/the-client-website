@@ -1,13 +1,18 @@
 header {
+    position: relative;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
+    height: 100px;
+    z-index: 10;
+
 
     nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 1em;
+        height: 100%;
         
         ul {
             display: flex;
@@ -21,18 +26,24 @@ header {
     }
 }
 
-.infinite-canvas {
-    display: grid;
-    gap: .5em;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
-    @supports (grid-template-rows: masonry) {
-        grid-template-rows: masonry;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
+main {
+    height: 90vh;
 }
+
+.infinite-canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  canvas {
+    display: block;
+    cursor: grab;
+  }
+
+  form {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
