@@ -1,14 +1,8 @@
-html {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
 header {
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
+
     nav {
         display: flex;
         align-items: center;
@@ -27,24 +21,18 @@ header {
     }
 }
 
-@supports not (grid-template-rows: masonry) {
-    .infinite-canvas {
-        display: grid;
-        gap: .5em;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-    
-}
-@supports (grid-template-rows: masonry) {
-    .infinite-canvas {
-        display: grid;
-        gap: .5em;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+.infinite-canvas {
+    display: grid;
+    gap: .5em;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    @supports (grid-template-rows: masonry) {
         grid-template-rows: masonry;
     }
-}
 
-img {
-    width: 100%;
-    height: auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+
 }
