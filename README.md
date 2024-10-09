@@ -17,6 +17,10 @@ De opdrachtgever heeft een duidelijk design geleverd, waar aan voldaan moet word
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
+## Live Link
+
+https://armanvd.github.io/the-client-website/
+
 ## Beschrijving
 
 Het project heeft nu een infinite canvas, deze is voornamelijk gecodeerd met javascript. Je kan door het infinite canvas heen door te draggen met de muis. 
