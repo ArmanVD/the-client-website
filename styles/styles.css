@@ -30,21 +30,59 @@ main {
     height: 90vh;
 }
 
-.infinite-canvas {
-    position: relative;
+.canvas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    grid-auto-rows: 150px; 
+    gap: 10px;
+    overflow: scroll; 
+    height: 90vh;
+    width: 100vw; 
+}
+
+.canvas img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    filter: blur(10px);
+    transition: filter 0.3s ease-in-out;
+    visibility: hidden;
+}
+
+.canvas img.loaded {
+    filter: blur(0);
+}
+
+.canvas img.in-view {
+    visibility: visible;
+}
+
+.canvas::-webkit-scrollbar {
+    display: none;
   }
   
-  canvas {
-    display: block;
-    cursor: grab;
-  }
 
-  form {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: wheat;
+.canvas {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
+@media (min-width: 768px) {
+    .canvas {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .canvas {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+        grid-auto-rows: 250px;
+    }
+}
+
+form {
+    position: relative;
+    bottom: 10vh;
+    background-color: aqua;
+    width: fit-content;
+}

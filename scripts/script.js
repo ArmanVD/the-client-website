@@ -1,92 +1,69 @@
 // JS
-const canvas = document.getElementById('infiniteCanvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector('.canvas');
+let imageIndex = 0;
+const imagesPerBatch = 20;
+const initialBatch = 30;
+let observer;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight *0.9;
-
-let offsetX = 0;
-let offsetY = 0;
-let isDragging = false;
-let startX, startY;
-
-let cols = 7;
-let width = Math.round(window.innerWidth / cols)
-
-const images = [
-    { src: `https://picsum.photos/${width}/200?${Math.random()}`, x: 0, y: 0 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: width + 5, y: 0 },
-    { src: `https://picsum.photos/${width}/300?${Math.random()}`, x: (width + 5) *2, y: 0 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: (width + 5) *3, y: 0 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: (width + 5) *4, y: 0 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: (width + 5) *5, y: 0 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: (width + 5) *6, y: 0 },
-    
-    { src: `https://picsum.photos/${width}/200?${Math.random()}`, x: 0, y: 5 + 200 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: (width + 5) , y: 5 + 400 },
-    { src: `https://picsum.photos/${width}/300?${Math.random()}`, x: (width + 5) *2, y: 5 + 300 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: (width + 5) *3, y: 5 + 400 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: (width + 5) *4, y: 5 + 400 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: (width + 5) *5, y: 5 + 400 },
-    { src: `https://picsum.photos/${width}/400?${Math.random()}`, x: (width + 5) *6, y: 5 + 400 },
-];
-
-
-let loadedImages = [];
-
-images.forEach((image, index) => {
-  const img = new Image();
-  img.src = image.src;
-  img.onload = () => {
-    loadedImages[index] = img;
-    drawCanvas();
-  };
-});
-
-canvas.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.clientX - offsetX;
-  startY = e.clientY - offsetY;
-  canvas.style.cursor = 'grabbing';
-});
-
-canvas.addEventListener('mousemove', (e) => {
-  if (isDragging) {
-    offsetX = e.clientX - startX;
-    offsetY = e.clientY - startY;
-    drawCanvas();
+function loadImages(isInitial) {
+  const length = isInitial ? initialBatch : imagesPerBatch;
+  for (let i = 0; i < length; i++) {
+    const img = document.createElement('img');
+    img.dataset.src = `https://picsum.photos/200/?random=${imageIndex++}`;
+    img.alt = 'Random Image';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    canvas.appendChild(img);
   }
-});
 
-canvas.addEventListener('mouseup', () => {
-  isDragging = false;
-  canvas.style.cursor = 'grab';
-});
-
-canvas.addEventListener('mouseleave', () => {
-  isDragging = false;
-  canvas.style.cursor = 'grab';
-});
-
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
- 
-  ctx.save();
-  ctx.translate(offsetX, offsetY);
-
-  images.forEach((image, index) => {
-    if (loadedImages[index]) {
-      ctx.drawImage(loadedImages[index], image.x, image.y);
-    }
-  });
-
-  ctx.restore();
+  lazyLoadImages();
 }
 
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight *0.9;
-  drawCanvas();
-});
+function initObserver() {
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.onload = () => img.classList.add('loaded');
+      }
+
+      entry.target.classList.toggle('in-view', entry.isIntersecting);
+    });
+  });
+}
+
+function lazyLoadImages() {
+  const images = document.querySelectorAll('.canvas img');
+  images.forEach(image => {
+    observer.observe(image);
+  });
+}
+
+let loading = false;
+
+function handleScroll() {
+  if (loading) return;
+
+  const scrollThreshold = 100;
+  const { scrollTop, scrollHeight, clientHeight, scrollLeft, scrollWidth, clientWidth } = canvas;
+
+  const nearBottom = scrollHeight - scrollTop - clientHeight <= scrollThreshold;
+  const nearRight = scrollWidth - scrollLeft - clientWidth <= scrollThreshold;
+  const nearTop = scrollTop <= scrollThreshold;
+  const nearLeft = scrollLeft <= scrollThreshold;
+
+  if (nearBottom || nearRight || nearTop || nearLeft) {
+    loading = true;
+    loadImages();
+    console.log('load images');
+  }
+
+  window.setTimeout(() => {
+    loading = false;
+  }, 500);
+}
+
+initObserver();
+loadImages(true);
+canvas.addEventListener('scroll', handleScroll);
