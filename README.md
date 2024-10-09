@@ -12,13 +12,13 @@ De opdrachtgever heeft een duidelijk design geleverd, waar aan voldaan moet word
 
 ## Inhoudsopgave Readme
 
-  * [Live Link](#Live Link)
+  * [Website](#website)
   * [Beschrijving](#beschrijving)
   * [Kenmerken](#kenmerken)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Live Link
+## Website
 
 https://armanvd.github.io/the-client-website/
 
