@@ -16,6 +16,7 @@ De opdrachtgever heeft een duidelijk design geleverd, waar aan voldaan moet word
   * [Beschrijving](#beschrijving)
   * [Kenmerken](#kenmerken)
   * [Bronnen](#bronnen)
+  * [Installatie](#installatie)
   * [Licentie](#licentie)
 
 ## Website
@@ -39,9 +40,11 @@ Hier worden de images ingeladen en gepositioneerd. https://github.com/ArmanVD/th
 
 Hier is ook de functie voor het draggen ingevoegd. https://github.com/ArmanVD/the-client-website/blob/36ca4ac6ec92463f252ed80f940e1bf31b89ab19/scripts/script.js#L46C1-L70C1
 
-, evenals het oneindig maken van het canvas. https://github.com/ArmanVD/the-client-website/blob/36ca4ac6ec92463f252ed80f940e1bf31b89ab19/scripts/script.js#L72C1-L92C4
+Evenals het oneindig maken van het canvas. https://github.com/ArmanVD/the-client-website/blob/36ca4ac6ec92463f252ed80f940e1bf31b89ab19/scripts/script.js#L72C1-L92C4
 
+## Installatie
 
+De pagina is locaal te installeren en te bewerken door de repository te clonen / te forken
 
 
 
