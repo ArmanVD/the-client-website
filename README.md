@@ -19,9 +19,12 @@ De opdrachtgever heeft een duidelijk design geleverd, waar aan voldaan moet word
 
 ## Beschrijving
 
+Het project heeft nu een infinite canvas, deze is voornamelijk gecodeerd met javascript. Je kan door het infinite canvas heen door te draggen met de muis. 
+Het canvas is responsive en de form ook.
 
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
+![image](https://github.com/user-attachments/assets/10c8d413-c1b8-43ab-b9f9-e5acccabdda3)
+![IMG_5607](https://github.com/user-attachments/assets/80ed84d6-e510-4394-83c6-dd0aecf5347a)
+
 https://armanvd.github.io/the-client-website/
 
 ## Kenmerken
