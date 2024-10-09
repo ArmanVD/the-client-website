@@ -9,6 +9,8 @@ De pagina zou filters moeten hebben, die objecten dimmen die niet binnen de filt
 Deze filters zijn aanklikbaar en leiden naar de zoekpagina.
 De opdrachtgever heeft een duidelijk design geleverd, waar aan voldaan moet worden.
 
+https://armanvd.github.io/the-client-website/
+
 ## Inhoudsopgave Readme
 
   * [Beschrijving](#beschrijving)
