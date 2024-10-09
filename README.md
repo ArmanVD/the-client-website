@@ -29,6 +29,12 @@ https://armanvd.github.io/the-client-website/
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+Het infinite canvas is gemaakt met de hmtl tag 'canvas', hier heb ik de class name "InfiniteCanvas" aan gegeven. Het canvas zit in een 'div' met de class name "Infinite-Canvas". Deze is verder gestyled met css. Het meeste werk zit in JavaScript.
+Hier worden de images ingeladen en gepositioneerd. https://github.com/ArmanVD/the-client-website/blob/36ca4ac6ec92463f252ed80f940e1bf31b89ab19/scripts/script.js#L16C1-L32C3
+
+Hier is ook de functie voor het draggen ingevoegd, evenals het oneindig maken van het canvas. https://github.com/ArmanVD/the-client-website/blob/36ca4ac6ec92463f252ed80f940e1bf31b89ab19/scripts/script.js#L46C1-L70C1
+
+
 
 
 
