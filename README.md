@@ -12,6 +12,7 @@ De opdrachtgever heeft een duidelijk design geleverd, waar aan voldaan moet word
 
 ## Inhoudsopgave Readme
 
+  * [Live Link](#Live Link)
   * [Beschrijving](#beschrijving)
   * [Kenmerken](#kenmerken)
   * [Bronnen](#bronnen)
