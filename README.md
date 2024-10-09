@@ -1,10 +1,13 @@
 # The Client - Website
 
-Ontwerp en maak een website voor een opdrachtgever en bespreek het resultaat tijdens de Sprint Review.
-
-De instructie van deze leertaak staan in de [INSTRUCTIONS.md](https://github.com/fdnd-task/the-client-website/blob/main/docs/INSTRUCTIONS.md)
-
-
+De opdracht is om een homepagina te maken om de collectie van vijf musea tentoon te
+stellen. Deze homepagina heeft een "oneindig canvas" waar de gebruiker oneindig in alle
+richtingen kan scrollen. Het canvas is gevuld met willekeurig uitgekozen kunstobjecten uit
+een API. Elk object is aanklikbaar.
+Op het canvas moet in- en uitgezoomd kunnen worden.
+De pagina zou filters moeten hebben, die objecten dimmen die niet binnen de filters passen.
+Deze filters zijn aanklikbaar en leiden naar de zoekpagina.
+De opdrachtgever heeft een duidelijk design geleverd, waar aan voldaan moet worden.
 
 ## Inhoudsopgave Readme
 
@@ -14,6 +17,8 @@ De instructie van deze leertaak staan in de [INSTRUCTIONS.md](https://github.com
   * [Licentie](#licentie)
 
 ## Beschrijving
+
+
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
