@@ -32,7 +32,9 @@ https://armanvd.github.io/the-client-website/
 Het infinite canvas is gemaakt met de hmtl tag 'canvas', hier heb ik de class name "InfiniteCanvas" aan gegeven. Het canvas zit in een 'div' met de class name "Infinite-Canvas". Deze is verder gestyled met css. Het meeste werk zit in JavaScript.
 Hier worden de images ingeladen en gepositioneerd. https://github.com/ArmanVD/the-client-website/blob/36ca4ac6ec92463f252ed80f940e1bf31b89ab19/scripts/script.js#L16C1-L32C3
 
-Hier is ook de functie voor het draggen ingevoegd, evenals het oneindig maken van het canvas. https://github.com/ArmanVD/the-client-website/blob/36ca4ac6ec92463f252ed80f940e1bf31b89ab19/scripts/script.js#L46C1-L70C1
+Hier is ook de functie voor het draggen ingevoegd. https://github.com/ArmanVD/the-client-website/blob/36ca4ac6ec92463f252ed80f940e1bf31b89ab19/scripts/script.js#L46C1-L70C1
+
+, evenals het oneindig maken van het canvas. https://github.com/ArmanVD/the-client-website/blob/36ca4ac6ec92463f252ed80f940e1bf31b89ab19/scripts/script.js#L72C1-L92C4
 
 
 
