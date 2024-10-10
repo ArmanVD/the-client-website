@@ -31,9 +31,6 @@ Het canvas is responsive.
 ![image](https://github.com/user-attachments/assets/9da374d5-a48e-45d1-bed5-c92e4c62a635)
 ![IMG_5614](https://github.com/user-attachments/assets/9d73dbc7-c963-49c7-8dc5-2a1668961b75)
 
-
-https://armanvd.github.io/the-client-website/
-
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 Het infinite canvas is gemaakt met de hmtl tag 'canvas', hier heb ik de class name "InfiniteCanvas" aan gegeven. Het canvas zit in een 'div' met de class name "Infinite-Canvas". Deze is verder gestyled met css. Het meeste werk zit in JavaScript.
