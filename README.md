@@ -26,7 +26,7 @@ https://armanvd.github.io/the-client-website/
 ## Beschrijving
 
 Het project heeft nu een infinite canvas, deze is opgezet met css en het infinite scrolling is gemaakt met JavaScript.
-Het canvas is responsive en de form ook.
+Het canvas is responsive.
 
 ![image](https://github.com/user-attachments/assets/9da374d5-a48e-45d1-bed5-c92e4c62a635)
 ![IMG_5614](https://github.com/user-attachments/assets/9d73dbc7-c963-49c7-8dc5-2a1668961b75)
