@@ -33,7 +33,9 @@ Het canvas is responsive.
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
-Het infinite canvas is gemaakt met de hmtl tag 'canvas', hier heb ik de class name "InfiniteCanvas" aan gegeven. Het canvas zit in een 'div' met de class name "Infinite-Canvas". Deze is verder gestyled met css. Het meeste werk zit in JavaScript.
+
+Het infinite canvas is gemaakt met de hmtl tag 'canvas', hier heb ik de class name "InfiniteCanvas" aan gegeven. Het canvas zit in een 'div' met de class name "Infinite-Canvas". https://github.com/ArmanVD/the-client-website/blob/f48a9a59358c8a02d0aa8729aafeb32b6b1af6cd/index.html#L35C4-L62C12
+
 
 Hier is te zien hoe JavaScript zelf berekend hoe veel nieuwe images geladen moeten worden. https://github.com/ArmanVD/the-client-website/blob/f5033c0aaa308ad6dc37571e949b2b72a5384bbc/scripts/script.js#L14C1-L31C6
 
